@@ -2,7 +2,7 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 const egg_1 = require("egg");
 class UserService extends egg_1.Service {
-    async list(pageParam = { offset: 0, limit: 10, orderBy: 'create_time', order: 'DESC' }) {
+    async list(pageParam = { offset: 0, limit: 10, orderBy: "create_time", order: "DESC" }) {
         const { offset, limit, orderBy, order } = pageParam;
         const result = await this.ctx.model.User.findAll({
             limit,

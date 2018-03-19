@@ -1,4 +1,4 @@
-import {Service} from 'egg';
+import {Service} from "egg";
 
 export default class BankService extends Service {
     public async list() {

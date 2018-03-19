@@ -5,11 +5,6 @@
   ],
   "jsRules": {},
   "rules": {
-    "quotemark": [
-      true,
-      "single",
-      "jsx-double"
-    ],
     "no-console": [
       true,
       "dir",

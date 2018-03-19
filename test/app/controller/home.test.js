@@ -1,14 +1,14 @@
-'use strict';
+"use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const bootstrap_1 = require("egg-mock/bootstrap");
-describe('test/app/controller/home.test.js', () => {
-    it('should assert', () => {
-        const pkg = require('../../../package.json');
+describe("test/app/controller/home.test.js", () => {
+    it("should assert", () => {
+        const pkg = require("../../../package.json");
         bootstrap_1.assert(bootstrap_1.app.config.keys.startsWith(pkg.name));
     });
-    it('should GET /', () => {
+    it("should GET /", () => {
         return bootstrap_1.app.httpRequest()
-            .get('/')
+            .get("/")
             .expect(200);
     });
 });

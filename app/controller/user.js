@@ -1,10 +1,10 @@
-'use strict';
+"use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const egg_1 = require("egg");
 class UserController extends egg_1.Controller {
     async index() {
-        this.ctx.body = 'hi, egg';
-        const res = await this.ctx.model.query('select 1 + 1;');
+        this.ctx.body = "hi, egg";
+        const res = await this.ctx.model.query("select 1 + 1;");
     }
     async users() {
         const model = this.ctx.model;

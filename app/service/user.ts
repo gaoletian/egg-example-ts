@@ -1,4 +1,4 @@
-import {Service} from 'egg';
+import {Service} from "egg";
 
 export interface IUserListParam {
     offset?: number;
@@ -8,7 +8,7 @@ export interface IUserListParam {
 }
 
 export default class UserService extends Service {
-    public async list(pageParam: IUserListParam = {offset: 0, limit: 10, orderBy: 'create_time', order: 'DESC'}) {
+    public async list(pageParam: IUserListParam = {offset: 0, limit: 10, orderBy: "create_time", order: "DESC"}) {
         const {offset, limit, orderBy, order} = pageParam;
         const result = await this.ctx.model.User.findAll({
             limit,

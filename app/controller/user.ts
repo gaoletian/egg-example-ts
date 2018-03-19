@@ -1,11 +1,11 @@
-'use strict';
+"use strict";
 
-import {Controller} from 'egg';
+import {Controller} from "egg";
 
 export default class UserController extends Controller {
     public async index() {
-        this.ctx.body = 'hi, egg';
-        const res = await this.ctx.model.query('select 1 + 1;');
+        this.ctx.body = "hi, egg";
+        const res = await this.ctx.model.query("select 1 + 1;");
     }
 
     public async users() {

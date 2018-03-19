@@ -21,10 +21,14 @@
     "eslint": "^4.11.0",
     "eslint-beautify": "^1.0.2",
     "eslint-config-egg": "^6.0.0",
+    "husky": "^0.14.3",
     "jest": "^22.4.2",
+    "lint-staged": "^7.0.0",
+    "prettier": "^1.11.1",
     "ts-jest": "^22.4.2",
     "tslib": "^1.9.0",
     "tslint": "^5.9.1",
+    "tslint-config-prettier": "^1.10.0",
     "typescript": "^2.7.2",
     "webstorm-disable-index": "^1.2.0"
   },
@@ -41,7 +45,15 @@
     "cov": "egg-bin cov",
     "lint": "tslint -p . --fix",
     "ci": "npm run lint && npm run cov",
-    "autod": "autod"
+    "autod": "autod",
+    "tslint-check": "tslint-config-prettier-check ./tslint.json",
+    "precommit": "lint-staged"
+  },
+  "lint-staged": {
+    "{src,test}/**/*.ts": [
+      "prettier --write --no-semi --single-quote",
+      "git add"
+    ]
   },
   "ci": {
     "version": "8"
