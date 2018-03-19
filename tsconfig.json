@@ -1,0 +1,35 @@
+{
+  "compileOnSave": true,
+  "compilerOptions": {
+    "module": "commonjs",
+    "esModuleInterop": true,
+    "target": "es2017",
+    "noImplicitAny": false,
+    "moduleResolution": "node",
+    "pretty": true,
+    "inlineSourceMap": true,
+    "importHelpers": true,
+    "charset": "utf8",
+    "baseUrl": ".",
+    "paths": {
+      "*": [
+        "*",
+        "node_modules/*"
+      ]
+    },
+    // "declaration": true,             //  自动生成类型声明文件
+    // "declarationDir": "./typings"    //  类型声明文件保存目录
+    //    "outDir": "dist",
+    "allowJs": false,                  //  开启时lint也会检测js, 所以要关闭
+  },
+  "include": [
+    "app/**/*",
+    "config/**/*",
+    "test/**/*.ts"
+  ],
+  "exclude": [
+    "app/public",
+    "app/views",
+    "node_modules"
+  ]
+}
