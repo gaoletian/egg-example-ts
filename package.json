@@ -50,7 +50,7 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "app/**/*.{ts,js}": [
+    "app/**/*.{ts,js,json}": [
       "prettier --write --semi --single-quote",
       "git add"
     ]
