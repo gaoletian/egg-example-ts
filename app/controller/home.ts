@@ -10,8 +10,7 @@ export default class HomeController extends Controller {
         this.ctx.body = {code: 200, message: "", data: res};
         this.ctx.service.user.list({});
         this.ctx.model.User.findOne({where: {name: "gao"}});
-        this.ctx.model.User.update({}, {fields: {}});
-        this.ctx.service.user.update({}, 1);
+                this.ctx.service.user.update({}, 1);
         // this.ctx.model.Bank.findAndCount();
         // this.ctx.service.user.list()
     }
