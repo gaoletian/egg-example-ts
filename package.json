@@ -50,8 +50,8 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "{src,test}/**/*.ts": [
-      "prettier --write --no-semi --single-quote",
+    "app/**/*.ts": [
+      "prettier --write --semi --single-quote",
       "git add"
     ]
   },
