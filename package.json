@@ -39,8 +39,8 @@
     "start": "egg-scripts start --daemon --title=egg-server-egg-example-typescript",
     "stop": "egg-scripts stop --title=egg-server-egg-example-typescript",
     "dev": "egg-bin dev",
-      "debug": "egg-bin debug",
-            "test": "npm run lint -- --fix && npm run test-local",
+    "debug": "egg-bin debug",
+    "test": "npm run lint -- --fix && npm run test-local",
     "test-local": "jest",
     "cov": "egg-bin cov",
     "lint": "tslint -p . --fix",
@@ -50,7 +50,7 @@
     "precommit": "lint-staged"
   },
   "lint-staged": {
-    "app/**/*.{ts,js,json}": [
+    "{app,test,config}/**/*.{ts,js,json}": [
       "prettier --write --semi --single-quote",
       "git add"
     ]
