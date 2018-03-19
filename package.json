@@ -51,7 +51,7 @@
   },
   "lint-staged": {
     "app/**/*.{ts|js|json}": [
-                "prettier --write --semi --single-quote",
+      "prettier --write --semi --single-quote",
       "git add"
     ]
   },
